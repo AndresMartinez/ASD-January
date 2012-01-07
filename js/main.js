@@ -66,6 +66,67 @@ function storeItems(id){
 
 
 
+function editItem(id) {
+          
+          
+          var value = localStorage.getItem(id);
+          value = value.split(';');
+          $('#pworkout').val(value[0]);
+          $('#name').val(value[1]);
+          $('#yes').val(value[2]);
+          $('#reps').val(value[3]);
+          $('# wkdate').val(value[4]);
+          $('#  ').val(value[5]);
+
+
+   // populates form fields with localStorage Values
+   
+   $('#pworkout').val() = pworkout;
+   $('#name').val()     = name ;
+   if(yes == "on"){
+      $('#yes').attr("checked","checked")
+   }
+   $('#reps').val()     = reps;
+   $('#wkdate').val()   = wkdate;
+   $('#comments').val() = comments;
+   
+   //reveal editItem button, hide submit
+   var editItem = $('#editItem');
+   editItem.style.display = "block";
+   var submit = $('#submit');
+   submit.style.display = "none";
+   
+   
+   
+   
+   
+   //capture editItem Buttons click
+   $('#editItem').onClick = function (){
+   
+   var pworkout = $('#pworkout').val();
+   var name     = $('#name').val();
+   var yes      = $('#yes ').val();
+   var reps     = $('#reps').val();
+   var wkdate   = $('#wkdate ').val();
+   var comments = $('#comments ').val();
+   
+   var allitems =[
+        pworkout,
+        name,
+        yes,
+        wkdate,
+        comments
+    ];
+   
+   
+   }
+
+
+};
+
+
+
+
 
 
 
