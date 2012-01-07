@@ -28,14 +28,58 @@ $(document).ready(function(){
 
 
 
-var item = {
-    "title"   : "Undead Monkey",
-    "species" : "Capuchin",
-    "name"    : "Jack",
-    "priceUSD": 19.95
+
+
+
+
+function storeItems(id){
+         if (id == 1){
+         
+         var workout = $('#workout').val();
+         var name    = $('#name').val();  
+         var yes     = $('#yes').val():
+         var reps    = $('#reps').val();
+         var wkdate  = $('#wkdate').val();
+         var comments= $('#comments').val;      
+         
+         var viewInfo = [
+             
+             workout,
+             name,
+             yes,
+             reps,
+             wkdate,
+             comments
+           ];
+           
+           
+           if(name != ""){
+              localStorage.setItem(viewInfo);
+           };
+         
+         }
 };
-var serializedItem = JSON.stringify(item);
-console.log(serializedItem);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function clearLocal() {
+	localStorage.clear(); 
+	location.reload(true);
+} 
+
 
 
 
